@@ -1,0 +1,97 @@
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+ }
+ .header {
+  font-size: 23px;
+  text-align: center;
+  background-color: rgba(67,212,51,0.8);
+  margin-bottom: 30px;
+  
+  top: 0;
+  left: 0;
+  width: 100%;
+ }
+ .root {
+  text-align: center;
+  margin: 0 auto;
+  background-color: rgb(240,240,240);
+  display: block;
+  margin-top: 0px;
+  
+}
+
+.logininput {
+  font-size: 20px;
+  height: 40px;
+  margin-top: 10px;
+  width: 90%;
+  border-radius: 40px;
+  text-align: center;
+}
+.loginbutton {
+  margin-top: 10px;
+  
+  background-color: green;
+  border-radius: 30px;
+  
+  font-weight: bold;
+  font-size: 20px;
+  padding: 5px;
+  width: 50%;
+}
+.recent{
+  background-color: green;
+  text-align: center;
+  margin-top: 20px;
+}
+.user{
+  color: red;
+  text-align: center;
+  display: block;
+}
+.post{
+  text-align: center;
+  border-bottom: 2px solid red;
+  
+}
+.loading{
+  color: green;
+  font-size: 50px;
+  text-align: center;
+  
+  
+}
+.postview{
+  text-align: center;
+  color: green;
+}
+ footer{
+   border: 2px solid green;
+   margin-top: 60px;
+   text-align: center;
+   
+ }
+ pre {
+   background-color: rgba(347, 348, 349, 1);
+   border: 3px solid rgba(242, 242, 242, 1);
+   display: block;
+   font-size: 1rem;
+   margin: 0.5rem 0;
+   padding: 0rem 0.5rem;
+   font-weight: bold;
+   font-size: 25px;
+   white-space: pre-wrap;
+   word-break: break-all;
+   
+ }
+ 
+
+ .button{
+   margin-left: 59px;
+   display: inline-block;
+   
+   
+ }
