@@ -2,9 +2,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  
  }
- .header {
+ .headkker {
   font-size: 23px;
   text-align: center;
   background-color: rgba(67,212,51,0.8);
@@ -68,12 +68,7 @@
   text-align: center;
   color: green;
 }
- footer{
-   border: 2px solid green;
-   margin-top: 60px;
-   text-align: center;
-   
- }
+ 
  pre {
    background-color: rgba(347, 348, 349, 1);
    border: 3px solid rgba(242, 242, 242, 1);

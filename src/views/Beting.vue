@@ -9,7 +9,7 @@
      {{ii.name}}
      
 
-      <button class="button" @click="placeBet(ii.price)">{{ii.price}}</button>
+      <button class="button" @click="placeBet(ii)">{{ii.price}}</button>
      
      <hr>
      </li>
@@ -27,11 +27,13 @@
             <button @click="placeBet(odds, site)">Place Bet</button>
           </li> -->
         
+  </div>
+  <div v-if="show">
       <h1>Odds: {{ ppp }}</h1>
 <h1>win tk: {{uuu}}</h1>  
   <input type="text" v-model="count" placeholder=" Bet amount type">
-  </div>
   <button @click="betbet">Place Bet</button>
+  </div>
 </template>
 
 <script>
@@ -42,7 +44,8 @@ export default {
     return {
       odds: '',
       ppp: '',
-    count: '12'
+    count: '12',
+    show: false
     };
   },
   
@@ -63,16 +66,21 @@ export default {
       axios
         .get("https://api.the-odds-api.com/v4/sports/upcoming/odds/?regions=us&markets=h2h&apiKey=36a66c5bd0aab6a695ac9d919db3eae8")
         .then(response => {
-          this.odds = response.data[1];
-          console.log(response.data[1])
+          this.odds = response.data[5];
+         
+         const pp = 1;
+          console.log(response.data[pp])
         })
         .catch(error => {
           console.error("Error fetching odds: ", error);
         });
     },
     placeBet(odds) {
-      this.ppp = odds;
-      console.log(this.uuu)
+  //  if(confirm('are yoy sure')){}
+      this.show = true
+      this.ppp = odds.price;
+      setInterval(this.ppp, 1000);
+      console.log(this.ppp)
       // You would typically send this to your own server or another API
     },
     betbet(){
