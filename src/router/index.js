@@ -31,6 +31,12 @@ const router = createRouter({
      
       component: () => import('../views/odds.vue')
     },
+    {
+      path: '/bet',
+      name: 'bet',
+     
+      component: () => import('../views/Beting.vue')
+    },
      {
       path: '/work',
       name: 'work',
