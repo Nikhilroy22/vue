@@ -1,17 +1,32 @@
 <template>
   <header>
+    
+<div class="nj" v-if="visibleLiveDemo">
+  <span class="n2">
+    <div class="head">menu</div>
+  <ol>
+    <il>Nikhil</il>
+    <il>Nikhil</il>
+    <il>Nikhil</il>
+</ol>
+    <span class="n3" @click="hide">X</span>
+</span>
+</div>
+
+
         <div class="nav-container">
+          
             <span class="logo">NavBar</span>
            
                 <ul class="nav--ul__two">
                     <span class="nav-liunk">Login</span>
                     <span class="nav-linuk">Signup</span>
                     <i class="material-icons navii">account_circle</i>
-                    <div class="icons8-menu"></div>
+                   <span style="font-size:25px;cursor:pointer" @click="show">&#9776;</span>
                 </ul>
-          
-           
+                
         </div>
+        
 </header>
   
   <RouterView />
@@ -44,7 +59,16 @@
 
 <script setup>
   import { RouterLink, RouterView } from 'vue-router'
- 
+   import { ref } from 'vue'
+  const visibleLiveDemo = ref(false)
+  function show(){
+  visibleLiveDemo.value = true
+  
+  }
+  function hide(){
+  visibleLiveDemo.value = false
+  
+  }
  
  </script>
 

@@ -7,7 +7,7 @@ footer{
   width: 100%;
   height: 50px;
   box-shadow: 0 0 3px rgba(0.0.0.0.2);
-  background-color: #ded4fc;
+  background: linear-gradient(50deg,white,black,green,#c01616,#533f3f);
   overflow-x: auto;
   display: flex;
 }
@@ -22,7 +22,7 @@ footer{
   white-space: nowrap;
   font-family: Sans-Serif;
   font-size: 14px;
-  color: #444444;
+  color: #ffffff;
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
   
@@ -71,7 +71,7 @@ header {
     font-weight: bold;
 }
 body{
-  background-color: rgb(72,78,61);
+  background-color: #ffff;
   
 }
 .navii{

@@ -91,3 +91,55 @@
    
    
  }
+ 
+ 
+.sidenav {
+ height: 100%;
+ width: 250px;
+ top: 0;
+ 
+ position: absolute;
+ background: #b49090ac;
+ z-index: 1;
+ transition: 0.5s ease;
+ transform: translateX(0);
+}
+.head{
+  color: red;
+  font-size: 30px;
+  font-weight: bold;
+  padding: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3px;
+  background: linear-gradient(30deg,white,black,green,red,#533f3f);
+  
+}
+
+.n2{
+  
+  height: 100%;
+ width: 250px;
+ top: 0;
+ right: 0;
+ position: absolute;
+ background: #b49090ac;
+ z-index: 1;
+ transition: 0.5s ease;
+ transform: translateX(0);
+}
+.n3{
+  height: 6%;
+ width: 18%;
+ right: 0;
+ background: red;
+ margin-right: 250px;
+ position: absolute;
+ font-size: 30px;
+ top:0px;
+ transition: 0.5s ease;
+ transform: translateX(0);
+   text-align: center;
+}
+
+
