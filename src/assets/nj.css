@@ -7,7 +7,7 @@ footer{
   width: 100%;
   height: 50px;
   box-shadow: 0 0 3px rgba(0.0.0.0.2);
-  background-color: #ffffff;
+  background-color: #ded4fc;
   overflow-x: auto;
   display: flex;
 }
@@ -52,19 +52,28 @@ header {
   top: 0;
   width: 100%;
   
-  background-color: #5cc5c2;
+  background-color: #ded4fc;
   display: flex;
   align-items: center;
   justify-content: space-between;
-    
+    overflow-x: auto;
 }
 
 .nav-container .logo {
+  margin-left: 9px;
     font-weight: bold;
     font-size: 30px;
 }
 .nav--ul__two {
+  margin-right: 9px;
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     font-weight: bold;
+}
+body{
+  background-color: rgb(72,78,61);
+  
+}
+.navii{
+  font-size: 30px;
 }

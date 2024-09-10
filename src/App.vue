@@ -6,6 +6,8 @@
                 <ul class="nav--ul__two">
                     <span class="nav-liunk">Login</span>
                     <span class="nav-linuk">Signup</span>
+                    <i class="material-icons navii">account_circle</i>
+                    <div class="icons8-menu"></div>
                 </ul>
           
            

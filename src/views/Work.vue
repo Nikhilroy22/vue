@@ -1,54 +1,68 @@
+<script setup>
+  import { ref } from 'vue'
+  const visibleLiveDemo = ref(false)
+  function show(){
+  visibleLiveDemo.value = true
+  
+  }
+  function hide(){
+  visibleLiveDemo.value = false
+  
+  }
+</script>
 <template>
-  <div>
-    <h1>Real-Time Updates</h1>
-    <p v-if="loading">Connecting...</p>
-    <ul v-if="!loading">
-      <li v-for="item in data" :key="item.id">{{ item.name }} - {{ item.value }}</li>
-    </ul>
+  <button color="primary" @click="show">Launch demo modal</button>
+  
+  <div v-if="visibleLiveDemo">
+    
+      <div class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close" @click="hide">&times;</span>
+     <h1>Odds: {{ ppp }}</h1>
+<h1>win tk</h1>  
+  <input type="text" placeholder=" Bet amount type">
+  <button @click="betbet">Place Bet</button>
   </div>
+  </div>
+  </div>
+  
 </template>
 
-<script>
-import { ref, onMounted, onUnmounted } from 'vue';
+<style setup>
 
-export default {
-  setup() {
-    const data = ref([]);
-    const loading = ref(true);
-    let socket;
-
-    const connectWebSocket = () => {
-      socket = new WebSocket('wss://jsonplaceholder.typicode.com/todos/1');
-      
-      socket.onopen = () => {
-        loading.value = false;
-      };
-
-      socket.onmessage = (event) => {
-        const parsedData = JSON.parse(event.data);
-        data.value = parsedData; // Update with new data from WebSocket
-      };
-
-      socket.onclose = () => {
-        console.log('WebSocket closed');
-      };
-
-      socket.onerror = (error) => {
-        console.error('WebSocket error:', error);
-      };
-    };
-
-    onMounted(() => {
-      connectWebSocket();
-    });
-
-    onUnmounted(() => {
-      if (socket) {
-        socket.close(); // Close WebSocket connection when component is unmounted
-      }
-    });
-
-    return { data, loading };
-  }
-};
-</script>
+/* The Modal (background) */
+.modal {
+align-items: center; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  bottom: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+  .close:hover,
+.close:focus {
+  color: #b1279b00;
+  text-decoration: none;
+  cursor: pointer;
+}
+  
+  </style>
